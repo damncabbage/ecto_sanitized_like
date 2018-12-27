@@ -5,11 +5,7 @@ use Mix.Config
 if Mix.env() == :test do
   config :ecto_sanitized_like, EctoSanitizedLike.Test.Repo,
     adapter: Ecto.Adapters.Postgres,
-    username: (
-      System.get_env("TEST_DB_USER")
-      || System.get_env("USER")
-      || "postgres"
-    ),
+    username: System.get_env("TEST_DB_USER") || System.get_env("USER") || "postgres",
     database: "ecto_sanitized_like_test",
     hostname: "localhost",
     pool: Ecto.Adapters.SQL.Sandbox,

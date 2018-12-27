@@ -16,12 +16,12 @@ defmodule EctoSanitizedLike.MixProject do
       deps: deps(),
       dialyzer: dialyzer(),
       docs: docs(),
-      package: package(),
+      package: package()
     ]
   end
 
   def application do
-    [ extra_applications: [:logger] ]
+    [extra_applications: [:logger]]
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
@@ -60,7 +60,7 @@ defmodule EctoSanitizedLike.MixProject do
       {:postgrex, "~> 0.13", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: :dev, runtime: false},
       {:ex_doc, "~> 0.12", only: :dev, runtime: false},
-      {:stream_data, "~> 0.4", only: [:dev, :test]},
+      {:stream_data, "~> 0.4", only: [:dev, :test]}
     ]
   end
 end

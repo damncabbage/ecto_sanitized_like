@@ -3,7 +3,7 @@ defmodule EctoSanitizedLike.Test.Item do
   import Ecto.Query, warn: false
 
   schema "items" do
-    field :test_run, :string
-    field :name, :string
+    field(:test_run, :string)
+    field(:name, :string)
   end
 end
