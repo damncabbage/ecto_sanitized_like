@@ -1,5 +1,8 @@
 # ecto_sanitized_like
 
+[![Hex.pm](https://img.shields.io/hexpm/v/ecto_sanitized_like.svg)](https://hex.pm/packages/ecto_sanitized_like)
+[![Build Status](https://travis-ci.org/damncabbage/ecto_sanitized_like.svg?branch=master)](https://travis-ci.org/damncabbage/ecto_sanitized_like)
+
 Adds a function to sanitize `LIKE` / `ILIKE` strings that may contain wildcards or escapes.
 
 ## Installation
