@@ -59,7 +59,7 @@ defmodule EctoSanitizedLike.MixProject do
       {:ecto, "~> 2.2"},
       {:postgrex, "~> 0.13", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: :dev, runtime: false},
-      {:ex_doc, "~> 0.12", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.18.0", only: :dev, runtime: false},
       {:stream_data, "~> 0.4", only: [:dev, :test]}
     ]
   end
