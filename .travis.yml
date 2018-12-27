@@ -1,0 +1,32 @@
+language: elixir
+
+elixir:
+  - 1.6.6
+
+otp_release:
+  - 20.3
+
+env:
+  global:
+    TEST_DB_USER: "postgres"
+
+addons:
+  postgresql: "9.5"
+
+cache:
+  directories:
+    - deps
+    - _build
+
+install:
+  - mix local.hex --force
+  - mix local.rebar --force
+  - mix deps.get
+
+before_script:
+  - mix clean
+  - MIX_ENV=test mix do ecto.create, ecto.migrate
+
+script:
+  - mix test
+  - mix dialyzer
