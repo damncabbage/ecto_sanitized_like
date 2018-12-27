@@ -1,6 +1,6 @@
 defmodule Ecto.Query.Like do
   @moduledoc """
-  LIKE / ILIKE string sanitisation.
+  `LIKE` / `ILIKE` string sanitisation.
   """
 
   @doc ~S"""
@@ -8,8 +8,8 @@ defmodule Ecto.Query.Like do
 
   ## Examples
 
-    iex> Ecto.Query.Like.sanitize(~S(foo%bar\baz_))
-    ~S(foo\%bar\\baz\_)
+      iex> Ecto.Query.Like.sanitize(~S(foo%bar\baz_))
+      ~S(foo\%bar\\baz\_)
 
   """
   @spec sanitize(String.t()) :: String.t()
